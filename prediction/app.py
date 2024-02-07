@@ -2,12 +2,11 @@ import streamlit as st
 import joblib
 import os
 
-
-# Get the absolute path of the file
-file_path = os.path.abspath('trained_model.joblib_1')
-
-# Load the model using the absolute file path
-model = joblib.load(file_path)
+file_path = 'trained_model.joblib_1'
+if os.path.exists(file_path):
+    print("File exists")
+else:
+    print("File does not exist")
 
 # Homepage
 image_path = "https://www.livemint.com/lm-img/img/2023/03/25/600x338/health-insurance-kMkD--621x414_1679762640902_1679762641259_1679762641259.jpg"

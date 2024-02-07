@@ -3,10 +3,8 @@ import joblib
 import os
 
 file_path = 'trained_model.joblib_1'
-if os.path.exists(file_path):
-    print("File exists")
-else:
-    print("File does not exist")
+os.path.exists(file_path):
+  
 
 # Homepage
 image_path = "https://www.livemint.com/lm-img/img/2023/03/25/600x338/health-insurance-kMkD--621x414_1679762640902_1679762641259_1679762641259.jpg"
@@ -43,5 +41,5 @@ else:
 # Make prediction
 if st.button('Predict'):
     # Corrected: Pass numerical values, not strings
-    prediction = predict([[age, sex, bmi, children, smoker, region]])
+    prediction = model.predict([[age, sex, bmi, children, smoker, region]])
     st.success('Your insurance cost is ${}'.format(round(prediction[0], 2)))

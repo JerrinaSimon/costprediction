@@ -3,7 +3,7 @@ import joblib
 import os
 
 file_path = 'trained_model.joblib_1'
-os.path.exists(file_path):
+os.path.exists(file_path)
   
 
 # Homepage

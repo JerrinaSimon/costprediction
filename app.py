@@ -1,5 +1,4 @@
 import streamlit as st
-pip install joblib
 import joblib
 
 # Load the trained model

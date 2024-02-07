@@ -1,7 +1,7 @@
 import streamlit as st
 import joblib
 # Load the trained model
-model = joblib.load('trained_model.joblib_1')
+model_1 = joblib.load('trained_model.joblib_1')
 
 # Homepage
 image_path = "https://www.livemint.com/lm-img/img/2023/03/25/600x338/health-insurance-kMkD--621x414_1679762640902_1679762641259_1679762641259.jpg"
@@ -38,5 +38,5 @@ else:
 # Make prediction
 if st.button('Predict'):
     # Corrected: Pass numerical values, not strings
-    prediction = model.predict([[age, sex, bmi, children, smoker, region]])
+    prediction = model_1.predict([[age, sex, bmi, children, smoker, region]])
     st.success('Your insurance cost is ${}'.format(round(prediction[0], 2)))

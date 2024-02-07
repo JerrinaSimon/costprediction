@@ -43,5 +43,5 @@ else:
 # Make prediction
 if st.button('Predict'):
     # Corrected: Pass numerical values, not strings
-    prediction = model.predict([[age, sex, bmi, children, smoker, region]])
+    prediction = predict([[age, sex, bmi, children, smoker, region]])
     st.success('Your insurance cost is ${}'.format(round(prediction[0], 2)))

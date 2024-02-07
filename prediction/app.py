@@ -2,8 +2,10 @@ import streamlit as st
 import joblib
 import os
 
-file_path = 'trained_model.joblib_1'
-os.path.exists(file_path)
+file_path = os.path.abspath('trained_model.joblib_1')
+
+# Load the model using the absolute file path
+model = joblib.load(file_path)
   
 
 # Homepage

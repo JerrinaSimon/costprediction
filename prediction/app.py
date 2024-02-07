@@ -2,7 +2,10 @@ import streamlit as st
 import joblib
 
 # Load the trained model
-model = joblib.load('trained_model.joblib_1')
+try:
+    model = joblib.load('trained_model.joblib_1')
+except FileNotFoundError:
+    print("Error: The file 'trained_model.joblib_1' does not exist.")
 
 # Homepage
 image_path = "https://www.livemint.com/lm-img/img/2023/03/25/600x338/health-insurance-kMkD--621x414_1679762640902_1679762641259_1679762641259.jpg"

@@ -1,6 +1,7 @@
 import streamlit as st
 import joblib
-
+import os
+print("Current Directory:", os.getcwd())
 # Load the trained model
 model = joblib.load('trained_model.joblib_1')
 

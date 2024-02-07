@@ -1,9 +1,13 @@
 import streamlit as st
 import joblib
+import os
 
-# Load the trained model
-model = joblib.load('trained_model.joblib_1')
 
+# Get the absolute path of the file
+file_path = os.path.abspath('trained_model.joblib_1')
+
+# Load the model using the absolute file path
+model = joblib.load(file_path)
 
 # Homepage
 image_path = "https://www.livemint.com/lm-img/img/2023/03/25/600x338/health-insurance-kMkD--621x414_1679762640902_1679762641259_1679762641259.jpg"
